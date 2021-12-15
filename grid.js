@@ -26,7 +26,7 @@ function createGrid(size) {
     // changes color of grid when hovered
     let squares = document.querySelectorAll('.div')
     squares.forEach(square => {
-        square.addEventListener('click', () => {
+        square.addEventListener('mouseover', () => {
             let randomColor = `rgb(${Math.floor(Math.random() * 254)}, ${Math.floor(Math.random() * 254)}, ${Math.floor(Math.random() * 254)})`
             square.style.backgroundColor = randomColor
         })
