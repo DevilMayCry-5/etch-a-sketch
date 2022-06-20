@@ -4,6 +4,8 @@ const borderBtn = document.querySelector(".border");
 const input = document.querySelector("input");
 const rainbowBtn = document.querySelector(".rainbow");
 const grayScaleBtn = document.querySelector(".grayscale");
+const eraseBtn = document.querySelector(".erase");
+
 
 let paint = 'rainbow'
 
@@ -34,7 +36,7 @@ let onHover = function () {
       });
     } else if (paint == "grayscale") {
       square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "#555";
+        square.style.backgroundColor = "#111";
       });
     } else {
       square.addEventListener("mouseover", () => {
@@ -48,8 +50,16 @@ let clearGrid = function () {
   let squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
     square.style.backgroundColor = "#fff";
+    square.classList.remove('border-box');
   });
 };
+
+let borderToggle = function () {
+  let squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    square.classList.toggle('border-box');
+  });
+}
 
 function startPainting() {
   createGrid(16);
@@ -71,7 +81,15 @@ function startPainting() {
     onHover()
   })
 
+  eraseBtn.addEventListener('click', () => {
+    paint = 'erase'
+    onHover()
+  })
+
   clearBtn.addEventListener('click', clearGrid)
+
+  borderBtn.addEventListener('click', borderToggle)
+
 }
 
 startPainting()
