@@ -16,6 +16,7 @@ input.addEventListener('change', () => {
 
 // creates a grid 
 function createGrid(size) {
+    
     for (let index = 0; index < size * size; index++) {
         let div = document.createElement('div')
         grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`

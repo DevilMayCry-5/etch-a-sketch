@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="grid.css">
+    <title>Etch A Sketch - SketchPad</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="grid-container">
 
-        <h1>Etch-A-Sketch</h1>
-
-        
-        <div>
-            <button>Clear Grid</button>
-            <button id="border">Toggle Borders</button>
-            <input type="number" placeholder="Enter Grid Size">
-        </div>
-        <div class="grid">
-
+    <main>
+        <h1>SketchPad</h1>
+        <div class="top-controls">
+            <button class="clear">clear grid</button>
+            <button class="border">toggle border</button>
+            <input type="number" name="grid-size" id="grid-size" placeholder="enter grid size">
         </div>
 
-        <div>
-            <button id="rainbow">Rainbow</button>
-            <button id="grayscale">Grayscale</button>
-            
+        <div class="grid-container">
+
         </div>
-    </div>
-    <script src="grid.js"></script>
+
+        <div class="bottom-controls">
+            <button class="rainbow">Rainbow</button>
+            <button class="grayscale">Grayscale</button>
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
